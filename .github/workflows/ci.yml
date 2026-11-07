@@ -1,0 +1,14 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-24.04-arm   # native aarch64 = Move's CPU: no cross toolchain, no apt
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Host tests
+        run: ./scripts/test.sh
+      - name: Build for Move (aarch64)
+        run: |
+          ./scripts/build.sh
+          file dist/skiff/dsp.so | grep -q 'ARM aarch64'

@@ -1,0 +1,17 @@
+{
+  "id": "skiff",
+  "name": "Skiff Synth",
+  "abbrev": "SKIFF",
+  "version": "0.1.0",
+  "api_version": 2,
+  "description": "Skiff's 14 synth and drum engines (ANALOG, FM6, PHASE, LOFI, SAMPLE, VOICE, TRIO, WHEEL, GRAIN, PHYS, NOISE, SLICE, DRUM, DRUM-X) and its 148 factory presets, from the M-VAVE FM-1 firmware, as a Move sound generator",
+  "author": "Luis (port); Skiff by illuminus5, a fork of Felucca by Hugelton Instruments",
+  "dsp": "dsp.so",
+  "capabilities": {
+    "chainable": true,
+    "component_type": "sound_generator",
+    "audio_out": true,
+    "midi_in": true,
+    "aftertouch": true
+  }
+}
